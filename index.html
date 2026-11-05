@@ -42,27 +42,19 @@
 	Aren't this picture funny?!
 	Below is the source.
 -->
-<html>
+<html lang="zh-CN">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<title>BROKE WORKS作品集- Go for BROKE!</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+		<link rel="stylesheet" href="dist/plugin/highlight/zenburn.css">
 	</head>
 	<body>
 		<div class="reveal">
@@ -104,18 +96,18 @@
 						<h1><font color="#ffffff">My designs👇</font></h1>
 					</section>
 					<section>
-						<img height="600"src="images/recovered/006tNbRwgy1fxpvr5soh1j31400u0k2p.jpg">
+						<img height="600" src="images/recovered/006tNbRwgy1fxpvr5soh1j31400u0k2p.jpg">
 					</section>
 					<section>
 						<img height="600" src="images/recovered/006tNbRwly1fxpvp1wcr5j31400u00zt.jpg">
 					</section>
 					<section>
-						<img height="600"src="images/recovered/006tNbRwly1fxpvzzlxbnj31400u0t9q.jpg">
+						<img height="600" src="images/recovered/006tNbRwly1fxpvzzlxbnj31400u0t9q.jpg">
 					</section>
 					<section>
 						<h2>Poster</h2>
 						<h3>「Hip-Hop」</h3>
-						<img height="450"src="images/recovered/006tNbRwly1fxq8by8zp6j315h0u0gwm.jpg">
+						<img height="450" src="images/recovered/006tNbRwly1fxq8by8zp6j315h0u0gwm.jpg">
 					</section>
 					<section>
 						<h1>River Records</h1>
@@ -158,27 +150,19 @@
 			</div>
 		</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
+		<script src="dist/reveal.js"></script>
+		<script src="dist/plugin/markdown.js"></script>
+		<script src="dist/plugin/highlight.js"></script>
+		<script src="dist/plugin/search.js"></script>
+		<script src="dist/plugin/zoom.js"></script>
+		<script src="dist/plugin/notes.js"></script>
 		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			<!-- 5 sec per slide -->
-			Reveal.configure({
-				autoSlide: 5000
-			});
+			// https://revealjs.com/config/
 			Reveal.initialize({
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/search/search.js', async: true },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
+				autoSlide: 5000,
+				view: 'slide',
+				scrollActivationWidth: 0,
+				plugins: [RevealMarkdown, RevealHighlight, RevealSearch, RevealZoom, RevealNotes]
 			});
 		</script>
 	</body>
